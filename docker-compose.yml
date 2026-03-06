@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ghost-ai-brain
+    volumes:
+      - ollama_storage:/root/.ollama
+    ports:
+      - "11434:11434"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+  ghost-ui:
+    build: .
+    container_name: ghost-protocol-ui
+    ports:
+      - "8501:8501"
+    environment:
+      - WAZUH_HOST=${WAZUH_IP}
+      - WAZUH_USER=${WAZUH_USER}
+      - WAZUH_PASS=${WAZUH_PASS}
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+volumes:
+  ollama_storage:

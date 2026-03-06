@@ -1,0 +1,10 @@
+<ossec_config>
+  <syscheck>
+    <directories realtime="yes">/</directories>
+    <ignore>/mnt/ghost_vault</ignore>
+  </syscheck>
+  <localfile>
+    <location>/var/log/syslog</location>
+    <log_format>syslog</log_format>
+  </localfile>
+</ossec_config>

@@ -1,0 +1,15 @@
+<group name="supply_chain">
+  <rule id="100200" level="10">
+    <field name="json.scanner">grype</field>
+    <description>Supply chain vulnerabilities detected by Grype</description>
+  </rule>
+  <rule id="100201" level="12">
+    <field name="json.scanner">modelscan</field>
+    <description>ModelScan findings on AI model</description>
+  </rule>
+  <rule id="100202" level="11">
+    <field name="json.package"></field>
+    <field name="json.malicious">true</field>
+    <description>AI Package Hunter flagged malicious source</description>
+  </rule>
+</group>

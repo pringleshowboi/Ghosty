@@ -1,0 +1,37 @@
+<group name="novirus">
+  <rule id="100100" level="10">
+    <field name="json.source">novirus</field>
+    <field name="json.type">behavior_alert</field>
+    <description>NoVirus ransomware-like behavior</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+  </rule>
+  <rule id="100101" level="12">
+    <field name="json.source">novirus</field>
+    <field name="json.type">file_threat</field>
+    <field name="json.method">signature</field>
+    <description>NoVirus file threat detected by signature</description>
+  </rule>
+  <rule id="100102" level="9">
+    <field name="json.source">novirus</field>
+    <field name="json.type">file_threat</field>
+    <field name="json.method">heuristic</field>
+    <description>NoVirus file threat detected by heuristic</description>
+  </rule>
+  <rule id="100103" level="8">
+    <field name="json.source">novirus</field>
+    <field name="json.type">context_alert</field>
+    <description>NoVirus suspicious process context</description>
+  </rule>
+  <rule id="100104" level="4">
+    <field name="json.source">novirus</field>
+    <field name="json.type">remediation_start</field>
+    <description>NoVirus remediation started</description>
+  </rule>
+  <rule id="100105" level="4">
+    <field name="json.source">novirus</field>
+    <field name="json.type">remediation_result</field>
+    <description>NoVirus remediation result</description>
+  </rule>
+</group>

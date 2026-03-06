@@ -1,0 +1,10 @@
+<ossec_config>
+  <localfile>
+    <location>c:\\ProgramData\\Wazuh\\logs\\novirus_events.json</location>
+    <log_format>json</log_format>
+  </localfile>
+  <localfile>
+    <location>c:\\ProgramData\\Wazuh\\logs\\supply_chain.json</location>
+    <log_format>json</log_format>
+  </localfile>
+</ossec_config>

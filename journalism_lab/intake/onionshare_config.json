@@ -1,0 +1,6 @@
+{
+  "use_tor_proxy": true,
+  "tor_socks": "socks5h://127.0.0.1:9050",
+  "download_dir": "~/OnionShare",
+  "auto_receive": true
+}
